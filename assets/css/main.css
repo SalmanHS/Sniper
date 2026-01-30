@@ -1,0 +1,115 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-cairo: 'Cairo', sans-serif;
+}
+
+* {
+  font-family: var(--font-cairo);
+  direction: rtl;
+}
+
+body {
+  font-family: var(--font-cairo);
+  direction: rtl;
+}
+
+/* Light Theme */
+:root {
+  --bg-primary: #ffffff;
+  --bg-secondary: #f8f9fa;
+  --bg-tertiary: #e9ecef;
+  --text-primary: #1a1a1a;
+  --text-secondary: #6c757d;
+  --border-color: #dee2e6;
+  --border-color-light: #f0f1f3;
+  --border-color-strong: #ced4da;
+  --accent-primary: #0d6efd;
+  --accent-primary-rgb: 13 110 253;
+  --accent-success: #198754;
+  --accent-success-rgb: 25 135 84;
+  --accent-danger: #dc3545;
+  --accent-danger-rgb: 220 53 69;
+  --accent-warning: #ffc107;
+  --accent-warning-rgb: 255 193 7;
+  --shadow-color: rgba(0, 0, 0, 0.08);
+  --shadow-color-strong: rgba(0, 0, 0, 0.15);
+}
+
+/* Dark Theme */
+.dark {
+  --bg-primary: #0f172a;
+  --bg-secondary: #1e293b;
+  --bg-tertiary: #334155;
+  --text-primary: #f1f5f9;
+  --text-secondary: #94a3b8;
+  --border-color: #3f4b5e;
+  --border-color-light: #2d3748;
+  --border-color-strong: #4b5768;
+  --accent-primary: #3b82f6;
+  --accent-primary-rgb: 59 130 246;
+  --accent-success: #22c55e;
+  --accent-success-rgb: 34 197 94;
+  --accent-danger: #ef4444;
+  --accent-danger-rgb: 239 68 68;
+  --accent-warning: #f59e0b;
+  --accent-warning-rgb: 245 158 11;
+  --shadow-color: rgba(0, 0, 0, 0.3);
+  --shadow-color-strong: rgba(0, 0, 0, 0.5);
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--bg-tertiary);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-secondary);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
