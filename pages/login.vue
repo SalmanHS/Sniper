@@ -119,11 +119,7 @@
         </div>
 
         <!-- Demo Credentials -->
-        <div class="mt-6 p-4 bg-warning/10 border border-warning/30 rounded-lg">
-          <p class="text-xs text-warning font-semibold mb-2">💡 بيانات تجريبية:</p>
-          <p class="text-xs text-text-secondary">البريد: أي بريد صحيح</p>
-          <p class="text-xs text-text-secondary">كلمة المرور: 6 أحرف على الأقل</p>
-        </div>
+        
       </div>
 
       <!-- Back to Home -->
